@@ -1,32 +1,53 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <v-container fluid>
+      <myheader />
+      <!-- <myModal /> -->
+      <router-view></router-view>
+      <myfooter />
+    </v-container>
   </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+import header from "./components/header";
+import footer from "./components/footer";
+// import modal from "./components/modal";
 
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
+export default {
+  components: {
+    myheader: header,
+    myfooter: footer
+    // myModal: modal,
+  },
+  data() {
+    return {
+      isModalVisible: false
+    };
+  },
+  methods: {
+    close() {
+      this.$emit("close");
+    },
+    showModal() {
+      this.isModalVisible = true;
+    },
+    closeModal() {
+      this.isModalVisible = false;
     }
   }
+};
+</script>
+
+<style >
+html,
+body,
+#app {
+  font-family: "Roboto", sans-serif;
+  background-color: #f5f5f5;
+}
+
+.container {
+  padding: 0;
 }
 </style>
