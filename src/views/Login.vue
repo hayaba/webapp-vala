@@ -19,34 +19,34 @@
 </template>
 
 <script>
-import firebase from 'firebase/app'
- import 'firebase/firestore'
+// import firebase from 'firebase/app'
+//  import 'firebase/firestore'
 
 export default {
-  data() {
-    return {
-      email: "",
-      passward: ""
-    };
-  },
-  methods: {
-    signIn() {
-      firebase.auth().signInwithEmailAndPassword(this.email, this.passward).then(() => {
-          this.$router.replace('/')
-      })
-      .catch(function(error) {
-          var errorCode = error.code;
-          var errorMessage = error.message;
-          if (errorCode === 'auth/wrong-password') {
-              alert ("wrong password")
-          } else {
-              alert (errorMessage)
-          }
-          console.log(error)
-      })
-    },
-    signOut() {}
-  }
+  // data() {
+  //   return {
+  //     email: "",
+  //     passward: ""
+  //   };
+  // },
+  // methods: {
+  //   signIn() {
+  //     firebase.auth().signInwithEmailAndPassword(this.email, this.passward).then(() => {
+  //         this.$router.replace('/')
+  //     })
+  //     .catch(function(error) {
+  //         var errorCode = error.code;
+  //         var errorMessage = error.message;
+  //         if (errorCode === 'auth/wrong-password') {
+  //             alert ("wrong password")
+  //         } else {
+  //             alert (errorMessage)
+  //         }
+  //         console.log(error)
+  //     })
+  //   },
+  //   signOut() {}
+  // }
 };
 </script>
 
