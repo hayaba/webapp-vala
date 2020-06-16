@@ -2,9 +2,7 @@
   <footer>
     <v-layout row wrap>
       <v-flex xs12 sm6 md3>
-        <li>
-          <b>Product</b>
-        </li>
+        <h3 id="title">product</h3>
         <a href="#">
           <li>What is Telecare?</li>
         </a>
@@ -19,9 +17,7 @@
         </a>
       </v-flex>
       <v-flex xs12 sm6 md3>
-        <li>
-          <b>Company</b>
-        </li>
+        <h3 id="title">company</h3>
         <a href="#">
           <li>News & Views</li>
         </a>
@@ -36,9 +32,7 @@
         </a>
       </v-flex>
       <v-flex xs12 sm6 md3>
-        <li>
-          <b>Legal</b>
-        </li>
+        <h3 id="title">legal</h3>
         <a href="#">
           <li>Prescription policy</li>
         </a>
@@ -85,13 +79,21 @@ footer {
   font-size: 14px;
 }
 
+#title {
+  margin: 30px 0 0 20px;
+  text-transform: uppercase;
+}
+
 li {
   height: 40px;
 }
 
 i {
-  color: #0082ad;
+  color: #000000;
   font-size: 2em;
-  margin-left: 30px;
+}
+
+i:hover {
+  color: #0082ad;
 }
 </style>
