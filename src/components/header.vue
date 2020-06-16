@@ -9,20 +9,21 @@
       <v-spacer></v-spacer>
 
       <v-toolbar-items class="buttons">
-        <router-link to="/">
-          <v-btn text>Home</v-btn>
+      
+        <router-link tag="li" active-class="active" to="/" exact>
+          <a>Home</a>
         </router-link>
 
-        <router-link to="/About">
-          <v-btn text>About</v-btn>
+        <router-link tag="li" active-class="active" to="/About">
+          <a>About</a>
         </router-link>
 
-        <router-link to="/Booking">
-          <v-btn text>Booking</v-btn>
+        <router-link tag="li" active-class="active" to="/Booking">
+          <a>Booking</a>
         </router-link>
 
-        <router-link to="/Login">
-          <v-btn text>Login</v-btn>
+        <router-link tag="li" active-class="active" to="/Login">
+          <a>Login</a>
         </router-link>
 
         <!-- <button type="button" class="btn" @click="showModal">Login</button>
@@ -55,7 +56,7 @@
         </router-link>
 
         <!-- <v-list-item>
-          <button type="button" class="btn" @click="showModal">Login</button>
+          <button id="show-modal" @click="showModal = true">Login</button>
           <modal v-show="isModalVisible" @close="closeModal" />
         </v-list-item>-->
       </v-list-item-group>
@@ -121,17 +122,32 @@ export default {
   }
 }
 
-a {
-  text-decoration: none;
-  color: #000000;
-  font-size: 1.3em;
+ul {
+  display: inline;
 }
 
-// #nav :hover {
-//   transition: ease-in 0.4s;
-// }
+li {
+ float: left;
+  list-style-type: none;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  
+}
 
-// #nav :active {
-//   background: #8b8a8a;
-// }
+a {
+  display: block;
+  text-decoration: none;
+  color: #000000;
+  padding: 22px;
+}
+
+
+li a:hover{
+  background-color: #ccbe86;
+  transition: ease-in 0.4s;
+}
+
+li.router-link-exact-active{
+  background-color: #ccbe86;
+}
 </style>
