@@ -19,8 +19,8 @@
 </template>
 
 <script>
-import firebase from 'firebase/app'
- import 'firebase/firestore'
+// import firebase from 'firebase/app'
+//  import 'firebase/firestore'
 
 export default {
   data() {
