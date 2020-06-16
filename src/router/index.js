@@ -4,6 +4,7 @@ import Home from '../views/Home.vue'
 import About from '../views/About.vue'
 import quiz from '../views/quiz.vue'
 import Booking from '../views/Booking.vue'
+import Login from '../views/Login.vue'
 
 
 
@@ -29,6 +30,15 @@ const routes = [
     path: '/booking',
     name: 'Booking',
     component: Booking
+  },
+  {
+    path: '/login',
+    name: 'Login',
+    component: Login
+  },
+  {
+    path: '*',
+    redirect: '/'
   },
 
 ]

@@ -136,7 +136,7 @@ export default {
 };
 </script>
 
-<style>
+<style >
 .row {
   justify-content: center;
 }
