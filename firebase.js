@@ -1,5 +1,5 @@
-import firebase from 'firebase/app'
- import 'firebase/firestore'
+// import firebase from 'firebase/app'
+//  import 'firebase/firestore'
  
  // Your web app's Firebase configuration
  var firebaseConfig = {
@@ -13,8 +13,8 @@ import firebase from 'firebase/app'
     measurementId: "G-ZPY0V0CZR9"
   };
   // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
+  // firebase.initializeApp(firebaseConfig);
+  // firebase.analytics();
 
-  export const db = firebase.firestore()
-  export const dbMenuAdd = db.collection('items');
+  // export const db = firebase.firestore()
+  // export const dbMenuAdd = db.collection('items');
