@@ -9,9 +9,9 @@
           <v-text-field type="email" label="E-mail"></v-text-field>
           <v-text-field type="password" label="Password"></v-text-field>
           <a href>Forgot your passward</a>
-
-          <v-btn @click.prevent="signIn()">login</v-btn>
-          <v-btn @click.prevent="signOut()">log out</v-btn>
+          <div id="btn-section">
+            <v-btn @click.prevent="signIn()">login</v-btn>
+          </div>
         </v-flex>
       </v-col>
     </v-row>
@@ -45,7 +45,6 @@ export default {
   //         console.log(error)
   //     })
   //   },
-  //   signOut() {}
   // }
 };
 </script>
@@ -71,5 +70,10 @@ a {
   padding: 10px 0 20px 0;
   text-decoration: underline;
   font-size: small;
+}
+
+#btn-section {
+  display: flex;
+  justify-content: flex-end;
 }
 </style>
